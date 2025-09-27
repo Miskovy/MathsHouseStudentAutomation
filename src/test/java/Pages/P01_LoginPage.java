@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import stepDefinitions.Hooks;
 
 public class P01_LoginPage {
-    public WebElement skipButton = Hooks.driver.findElement(By.xpath("//*[@id=\"screenshotContainer\"]/div[2]/div/div/div/div/div[9]"));
-    public WebElement loginTitle = Hooks.driver.findElement(By.xpath("//*[@id=\"screenshotContainer\"]/div[2]/div/div/div/div/div[13]"));
-    public WebElement emailTxt = Hooks.driver.findElement(By.xpath("//*[@id=\"screenshotContainer\"]/div[2]/div/div/div/div/div[14]"));
-    public WebElement passwordTxt = Hooks.driver.findElement(By.xpath("//*[@id=\"screenshotContainer\"]/div[2]/div/div/div/div/div[15]"));
-    public WebElement loginButton = Hooks.driver.findElement(By.xpath("//*[@id=\"screenshotContainer\"]/div[2]/div/div/div/div/div[18]"));
+    public WebElement skipButton(){return Hooks.driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Skip\"]"));}
+    public WebElement loginTitle(){return Hooks.driver.findElement(By.xpath("//android.view.View[@content-desc=\"Welcome Back\"]"));}
+    public WebElement emailTxt(){return Hooks.driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]"));}
+    public WebElement emailTxtHovered(){return Hooks.driver.findElement(By.xpath("//android.widget.ScrollView/android.widget.EditText[1]"));}
+    public WebElement passwordTxt(){return Hooks.driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]"));}
+    public WebElement passwordTxtHovered(){return Hooks.driver.findElement(By.xpath("//android.widget.ScrollView/android.widget.EditText[2]"));}
+    public WebElement loginButton(){return Hooks.driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Login\"]"));}
 }

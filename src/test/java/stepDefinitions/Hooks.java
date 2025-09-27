@@ -1,16 +1,20 @@
 package stepDefinitions;
 
 import io.appium.java_client.AppiumDriver;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class Hooks {
     public static AppiumDriver driver;
-    @BeforeTest
+    @Before
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -21,7 +25,7 @@ public class Hooks {
         capabilities.setCapability("appium:autoGrantPermissions", true);
         driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
-    @AfterTest
+    @After
     public void tearDown(){
         if (null != driver){
             driver.quit();
