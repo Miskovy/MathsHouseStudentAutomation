@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import stepDefinitions.Hooks;
 
 public class P03_EditProfilePage {
+    //Changeable elements
+    public WebElement Username(){return Hooks.driver.findElement(By.xpath(""));}
     //Before Edit Button
     public WebElement EditButton(){return Hooks.driver.findElement(By.xpath("//android.widget.Button"));}
     //After Edit Button

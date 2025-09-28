@@ -9,7 +9,12 @@ Feature: The Student is able to edit and update his profile
     And the user presses the edit icon
 
   Scenario: The user is able to edit his name
-    When the user changes his name to "Mazen2"
-    And the user changes his last name to "Khairy2"
+    When the user changes his name to "Mazen"
+    And the user changes his last name to "Khairy"
     And the user saves the changes
-    Then the name is changed to "Mazen2" and the last name to "Khairy2"
+    Then the user name "Mazen Khairy" should be displayed
+
+  Scenario: The user is able to change his email and password
+    When the user changes his email to "mazenkhairy200@gmail.com"
+    And the user saves the changes
+#    Then the email "mazenkhairy200@gmail.com" should be displayed
