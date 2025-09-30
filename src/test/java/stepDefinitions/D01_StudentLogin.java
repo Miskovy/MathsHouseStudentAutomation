@@ -43,7 +43,6 @@ P02_Dashboard dashboard = new P02_Dashboard();
     public void assert_login_student_success(){
     WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(10));
     By dashboardTitleLocator = By.xpath("//android.view.View[@content-desc=\"Dashboard\"]");
-
     Assert.assertTrue(
             wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardTitleLocator)).isDisplayed()
     );
